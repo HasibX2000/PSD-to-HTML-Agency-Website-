@@ -1,0 +1,507 @@
+// importing font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+// Css Normalize
+*,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// reuseable styles
+$sectionPadding: 50px 0;
+$colorPrimary: #1e1c31;
+$colorSecondary: #4270ec;
+.ReuseableBox-1 {
+  h5 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $colorPrimary;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 61px;
+    font-weight: 600;
+    color: $colorPrimary;
+  }
+  p {
+    color: rgba(30, 28, 49, 0.6);
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 400;
+    padding: 20px 0;
+  }
+  .btn-touch {
+    background-color: $colorSecondary;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 36px;
+    border-radius: 14px;
+  }
+}
+
+// body styles
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+// Header Section Styles
+header.header {
+  padding: 30px 0;
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 100px;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-size: 14px;
+          font-weight: 400;
+          color: $colorPrimary;
+          text-decoration: none;
+          padding-left: 40px;
+
+          &:hover {
+            color: $colorSecondary;
+          }
+        }
+        .active {
+          color: $colorSecondary;
+        }
+      }
+    }
+  }
+}
+//menu
+.menuContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      a {
+        color: #fff;
+        font-style: 30px;
+        text-decoration: none;
+        padding-bottom: 30px;
+        display: block;
+        &:hover {
+          color: $colorSecondary;
+        }
+      }
+    }
+  }
+  .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    box-shadow: none;
+    &:focus,
+    &:hover {
+      border: none;
+      box-shadow: none;
+    }
+
+    i {
+      color: #fff;
+      font-size: 30px;
+    }
+  }
+}
+// Hero Section Styles
+section.hero {
+  padding: $sectionPadding;
+  .heroLeft {
+    h1 {
+      font-size: 60px;
+      line-height: 76px;
+      font-weight: 600;
+      color: $colorPrimary;
+    }
+  }
+  .hero-right {
+    img {
+      width: 100%;
+    }
+  }
+}
+// Feature Section Styles
+section.featureSection {
+  padding: $sectionPadding;
+  img.fetureIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .featureBox {
+    padding-left: 20px;
+    h4 {
+      color: $colorPrimary;
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+    p {
+      color: rgba(30, 28, 49, 0.6);
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+}
+
+// Divider Section Styles
+section.dividerSection {
+  padding: $sectionPadding;
+}
+
+// About Section Styles
+section.aboutSection {
+  padding: $sectionPadding;
+  img {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}
+// Portfolio Section Styles
+section.portfolioSection {
+  padding: $sectionPadding;
+  h5 {
+    padding-bottom: 10px;
+  }
+
+  .portRight {
+    p {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      line-height: 25px;
+      font-weight: 400;
+      padding-bottom: 10px;
+    }
+    a {
+      color: $colorSecondary;
+      font-size: 14px;
+      line-height: 25px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+  .gallery {
+    padding: $sectionPadding;
+
+    .iconSet {
+      position: relative;
+      .portfolioImage {
+        border-radius: 5px;
+        padding-bottom: 30px;
+      }
+      .arrowIcon {
+        position: absolute;
+        color: $colorSecondary;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 45px;
+        right: 15px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Testinomy Section Style
+section.testimonySection {
+  padding: $sectionPadding;
+  text-align: center;
+  h5 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $colorPrimary;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 61px;
+    font-weight: 600;
+    color: $colorPrimary;
+    padding-bottom: 20px;
+  }
+
+  .testimonyContent {
+    img {
+      filter: drop-shadow(0px 0px 5px #ff000066);
+    }
+    p {
+      color: $colorPrimary;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+    h4 {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 600;
+      color: $colorPrimary;
+    }
+    h5 {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      color: $colorPrimary;
+    }
+  }
+  .carIndic {
+    color: $colorSecondary;
+  }
+}
+
+// News Section Style
+section.newsSection {
+  padding: $sectionPadding;
+  text-align: center;
+  h5 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $colorPrimary;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 61px;
+    font-weight: 600;
+    color: $colorPrimary;
+    padding-bottom: 50px;
+  }
+  .adminBar {
+    padding: 10px 0;
+
+    p {
+      padding-right: 30px;
+      color: rgba(30, 28, 49, 0.6);
+      font-size: 12px;
+      line-height: 19px;
+      font-weight: 500;
+    }
+  }
+  p {
+    padding-right: 30px;
+    color: $colorPrimary;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    padding-bottom: 5px;
+  }
+  a {
+    color: $colorSecondary;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+}
+section.contact {
+  padding: 100px 0;
+  background: linear-gradient(to right, #527ff6 0%, #e16dd9 64%, #ffcc70 100%);
+  border-radius: 15px;
+  h2 {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .btn-contact {
+    background-color: #fff;
+    color: $colorSecondary;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 14px;
+    margin: 0 auto;
+  }
+}
+// Footer Section Styles
+footer.footer {
+  padding: $sectionPadding;
+  img.footerLogo {
+    width: 200px;
+    padding-bottom: 30px;
+  }
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: $colorPrimary;
+    padding-bottom: 10px;
+  }
+  .input-group {
+    background: rgba(66, 112, 236, 0.1);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    .form-control {
+      background: transparent;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .btnSub {
+      border: none;
+      color: $colorSecondary;
+      &:hover,
+      &:focus {
+        border: none;
+      }
+    }
+  }
+  .footerLink {
+    font-size: 14px;
+    color: $colorPrimary;
+    text-decoration: none;
+    padding-bottom: 5px;
+    display: block;
+  }
+  .footerDetails {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(30, 28, 49, 0.6);
+    width: 70%;
+    padding-bottom: 30px;
+  }
+  .socials {
+    i {
+      font-size: 25px;
+      padding-right: 5px;
+      color: #000;
+    }
+  }
+}
+
+// RESPONSIVE DESIGN
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  section.hero,
+  section.featureSection,
+  section.dividerSection,
+  section.aboutSection,
+  section.portfolioSection,
+  section.testimonySection,
+  section.newsSection,
+  section.contact,
+  footer.footer {
+    padding: 20px 0;
+  }
+  .ReuseableBox-1 {
+    padding: 0;
+  }
+  section.aboutSection img {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .col-md-2 {
+    display: none;
+  }
+  section.testimonySection h1 {
+    font-size: 34px;
+  }
+  .newsSection {
+    img {
+      width: 100%;
+    }
+    .col-md-4 {
+      padding-bottom: 30px;
+    }
+  }
+  section.contact h2 {
+    width: 90%;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  footer.footer {
+    text-align: center;
+    .sectionTitle,
+    .footerLink,
+    .footerDetails,
+    a {
+      text-align: center;
+    }
+    .footerDetails {
+      width: 100%;
+    }
+  }
+  .btnMenu {
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .col-md-2 {
+    display: none;
+  }
+  .newsSection {
+    img {
+      width: 100%;
+    }
+    .col-md-4 {
+      padding-bottom: 30px;
+    }
+  }
+  .btnMenu {
+    display: block;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .col-md-2 {
+    display: block;
+  }
+  .btnMenu {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
